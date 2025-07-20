@@ -7,7 +7,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Your API key here
-API_KEY = "AIzaSyD_vPttiitar0aWuw551MTu3RPHgNJOkmY"
+API_KEY = "********************************"
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/')
