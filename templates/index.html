@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Sentiment Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fef9f9, #e0f7fa);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+            width: 430px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #34495e;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px 15px;
+            border: 2px solid #ccddee;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 25px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #00bcd4;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #0072ff, #0056b3);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #888;
+        }
+
+        footer span {
+            color: #00bcd4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎥 YouTube Sentiment Analyzer</h2>
+        <form method="POST" action="/result">
+            <input type="text" name="video_url" placeholder="Paste YouTube video URL here" required>
+            <br>
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+        <footer>
+            Built with <span>Flask</span> + <span>Machine Learning</span> 💡
+        </footer>
+    </div>
+</body>
+</html>
